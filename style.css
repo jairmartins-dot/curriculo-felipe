@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.curriculo {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- Lateral ---------- */
+.lateral {
+    width: 30%;
+    padding: 30px;
+    background-color: rgb(6, 40, 143);
+    color: white;
+    text-align: center;
+}
+
+.foto img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.lateral h1 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.lateral h2 {
+    margin: 30px 0 15px;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+}
+
+.lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.lateral li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.lateral a {
+    color: white;
+}
+
+/* ---------- Conteúdo ---------- */
+.conteudo {
+    width: 70%;
+    padding: 40px;
+}
+
+.conteudo section {
+    margin-bottom: 30px;
+}
+
+.conteudo h2 {
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 188, 2);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.conteudo h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.conteudo p {
+    margin: 0 0 15px;
+    line-height: 1.5;
+}
+
+/* Formação acadêmica: data à esquerda, detalhes à direita */
+.item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.data {
+    width: 110px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #ffae00;
+}
+
+.detalhe {
+    flex: 1;
+}
+
+/* Listas (cursos e habilidades) */
+.lista {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.lista li {
+    margin-bottom: 8px;
+}
+
+.habilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+    .curriculo {
+        flex-direction: column;
+    }
+
+    .lateral,
+    .conteudo {
+        width: 100%;
+    }
+
+    .item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .habilidades {
+        grid-template-columns: 1fr;
+    }
+}
